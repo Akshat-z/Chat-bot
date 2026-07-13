@@ -1,10 +1,7 @@
 import { streamText, convertToModelMessages, type UIMessage } from "ai";
-import { createOpenAI } from "@ai-sdk/openai";
+import { textModel as model } from "@/lib/openrouter-config";
 
-const openrouter = createOpenAI({
-  baseURL: "https://openrouter.ai/api/v1",
-  apiKey: process.env.OPENROUTER_API_KEY,
-});
+
 
 export async function POST(request: Request) {
     try {
@@ -14,7 +11,7 @@ export async function POST(request: Request) {
   const modelMessages = await convertToModelMessages(messages);
 
   const result = streamText({
-    model: openrouter("openrouter/free"),
+    model: model,
     messages: modelMessages,
   });
 

@@ -15,6 +15,13 @@
       "when": 1783863635253,
       "tag": "0001_known_carmella_unuscione",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1783971375621,
+      "tag": "0002_supreme_daredevil",
+      "breakpoints": true
     }
   ]
 }

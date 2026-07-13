@@ -5,11 +5,11 @@ export const documents = pgTable(
   {
     id: serial("id").primaryKey(),
     content: text("content").notNull(),
-    embedding: vector("embedding", { dimensions: 1536 }), // text-embedding-3-small
+    embedding: vector("embedding", { dimensions: 768 }), //nvidia/llama-nemotron-embed-vl-1b-v2:free
   },
   (table) => [
     index("embeddingIndex").using(
-      "hnsw",
+      "hnsw", //hirarchical navigable small world graph
       table.embedding.op("vector_cosine_ops")
     ),
   ]
