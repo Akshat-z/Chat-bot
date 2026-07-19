@@ -22,6 +22,13 @@
       "when": 1783971375621,
       "tag": "0002_supreme_daredevil",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1784468180979,
+      "tag": "0003_confused_black_tarantula",
+      "breakpoints": true
     }
   ]
 }

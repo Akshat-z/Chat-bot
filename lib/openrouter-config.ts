@@ -7,7 +7,7 @@ const textModel = createOpenAI({
 
 
 const embeddingModel = createOpenAI({
-  baseURL: "https://openrouter.ai/api/v1/embeddings",
+  baseURL: "https://openrouter.ai/api/v1",
   apiKey: process.env.OPENROUTER_API_KEY,
 }).embeddingModel(
   "nvidia/llama-nemotron-embed-vl-1b-v2:free"

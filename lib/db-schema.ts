@@ -5,7 +5,7 @@ export const documents = pgTable(
   {
     id: serial("id").primaryKey(),
     content: text("content").notNull(),
-    embedding: vector("embedding", { dimensions: 768 }), //nvidia/llama-nemotron-embed-vl-1b-v2:free
+    embedding: vector("embedding", { dimensions: 2048 }), //nvidia/llama-nemotron-embed-vl-1b-v2:free
   },
   (table) => [
     index("embeddingIndex").using(
